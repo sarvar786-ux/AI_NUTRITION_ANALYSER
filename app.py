@@ -6,7 +6,6 @@ import plotly.express as px
 
 from gemini_api import analyze_food_image, generate_health_summary
 from nutrition_utils import get_nutrition_info, generate_diet_recommendations
-from keras.models import load_model
 
 # ------------------- PAGE CONFIG -------------------
 st.set_page_config(page_title="Nutritionist GenAI Doctor", page_icon="🍏", layout="wide")
