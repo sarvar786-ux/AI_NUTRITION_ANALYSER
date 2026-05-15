@@ -27,6 +27,9 @@ if uploaded_file is not None:
     st.write("Analyzing image... 🔍")
 
     image_path = "temp_food_image.jpg"
+    
+    image = image.convert("RGB")
+    
     image.save(image_path)
 
     # -------- Step 1: Detect Food --------
