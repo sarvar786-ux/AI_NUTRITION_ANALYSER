@@ -13,7 +13,8 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 
 # Load model
-model = genai.GenerativeModel("gemini-1.5-flash")
+vision_model = genai.GenerativeModel("gemini-pro-vision")
+text_model = genai.GenerativeModel("gemini-pro")
 
 # Configure logging
 logging.basicConfig(
@@ -29,7 +30,7 @@ def analyze_food_image(image_path):
     try:
         image = Image.open(image_path)
 
-        response = model.generate_content([
+        response = vision_model.generate_content([
             "List all food items in this image separated by commas.",
             image
         ])
@@ -63,7 +64,7 @@ def generate_health_summary(summary):
         Keep response simple and 3-4 bullet points.
         """
 
-        response = model.generate_content(prompt)
+        response = text_model.generate_content(prompt)
 
         return response.text
 
