@@ -8,3 +8,4 @@ pdfplumber
 scikit-learn
 opencv-python-headless
 keras
+google-generativeai
