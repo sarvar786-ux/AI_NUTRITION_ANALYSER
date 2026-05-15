@@ -1,11 +1,8 @@
 streamlit
-numpy
-pandas
-pillow
-matplotlib
-plotly
-pdfplumber
-scikit-learn
-opencv-python-headless
-keras
 google-generativeai
+python-dotenv
+pillow
+pandas
+numpy
+plotly
+matplotlib
